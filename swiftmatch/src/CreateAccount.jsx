@@ -1,22 +1,39 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './App.css'; // Você pode usar o mesmo arquivo CSS
 
 function CreateAccount() {
-    // Estado para armazenar as entradas do formulário
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    
-    // Função para lidar com o envio do formulário
-    const handleSubmit = (e) => {
+    const [errorMessage, setErrorMessage] = useState(''); // Para mensagens de erro
+    const navigate = useNavigate(); // Usado para redirecionar para outra página
+  
+    const handleSubmit = async (e) => {
       e.preventDefault();
+  
       if (password !== confirmPassword) {
-        alert('As senhas não coincidem!');
-      } else {
-        // Aqui você pode adicionar lógica para inscrever o usuário (enviar os dados para um backend, por exemplo)
-        alert('Conta criada com sucesso!');
+        setErrorMessage('As senhas não coincidem!');
+        return;
       }
+  
+      try {
+        console.log('Enviando dados:', { username, password });  // Adicionado log
+        const response = await axios.post('http://localhost:5000/api/register', {
+          username,
+          password,
+        });
+        console.log('Resposta do servidor:', response.data); // Log da resposta
+        navigate('/login'); // Redireciona para a página de login
+      } catch (error) {
+        if (error.response) {
+          setErrorMessage(error.response.data.message || "Erro desconhecido");
+        } else {
+          setErrorMessage('Erro ao se comunicar com o servidor');
+        }
+      }  
     };
   
     return (
@@ -59,6 +76,8 @@ function CreateAccount() {
               required
             />
           </div>
+  
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
   
           <button type="submit" className="submit-btn">Inscrever-se</button>
         </form>
