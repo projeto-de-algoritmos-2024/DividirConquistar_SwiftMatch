@@ -45,7 +45,26 @@ app.post('/api/register', async (req, res) => {
     }
 });
 
+app.post('/api/login', async (req, res) => {
+    const { username, password } = req.body;
+  
+    // Verifique se o nome de usuário existe
+    const user = await Usuario.findOne({ where: { username } });
+    if (!user) {
+      return res.status(400).json({ message: 'Usuário não encontrado' });
+    }
+  
+    // Verifique se a senha está correta (use uma biblioteca de hash para comparar as senhas)
+    if (user.password !== password) {
+      return res.status(400).json({ message: 'Senha incorreta' });
+    }
+  
+    // Caso o login seja bem-sucedido, retorne um sucesso
+    return res.status(200).json({ message: 'Login bem-sucedido' });
+  });
+  
+  
 const port = 5000;
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}...`);
+    console.log(`Servidor rodando na porta ${port}...`);
 });

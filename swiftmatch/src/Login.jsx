@@ -1,15 +1,42 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Para navegação
+import { Link, useNavigate } from 'react-router-dom'; // Importando useNavigate para redirecionamento
 import './App.css'; // Arquivo CSS global
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(''); // Para exibir erros
+  const navigate = useNavigate(); // Hook para navegação após login
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar lógica para verificar se as credenciais estão corretas
-    alert('Login realizado!');
+
+    console.log('Username:', username);
+    console.log('Password:', password);
+
+    try {
+      // Enviar as credenciais para o backend
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Se o login for bem-sucedido, redirecionar para a página da conta
+        navigate('/conta'); // Aqui você redireciona para a página interna da conta
+      } else {
+        // Caso ocorra algum erro, exibir a mensagem de erro
+        setError(data.message);
+      }
+    } catch (err) {
+      console.error(err);
+      setError('Erro ao tentar fazer login');
+    }
   };
 
   return (
@@ -27,7 +54,7 @@ function Login() {
             required
           />
         </div>
-        
+
         <div className="form-group">
           <label htmlFor="password">Senha</label>
           <input
@@ -42,6 +69,8 @@ function Login() {
 
         <button type="submit" className="submit-btn">Entrar</button>
       </form>
+
+      {error && <p className="error">{error}</p>}
 
       <p>
         <Link to="/criar-conta">Ainda não tem uma conta? Crie uma agora!</Link>
