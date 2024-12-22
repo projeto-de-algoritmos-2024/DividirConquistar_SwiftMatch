@@ -90,6 +90,35 @@ app.post('/api/save-ranking', async (req, res) => {
     res.status(500).json({ message: 'Erro ao salvar ranking', error: error.message });
   }
 });
+
+// Rota para buscar amigo
+app.post('/api/find-friend', async (req, res) => {
+  const { username} = req.body;
+
+  try {
+    // Verifica se o usuário existe
+    const user = await Usuario.findOne({ where: { username } });
+    if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado' });
+    }
+
+    // Verifica se o amigo tem ranking
+    const ranking = await Ranking.findOne({ where: { userId: user.id } });
+    if (!ranking) {
+      return res.status(400).json({ message: 'Amigo não completou o rankeamento' });
+    }
+
+    // Retorna os rankings para comparação
+    return res.json({
+      username: user.username,
+      myRanking: ranking.dataValues.ranking, // Aqui você ajustaria para o formato dos dados de rankeamento
+      friendRanking: ranking.dataValues.ranking,
+    });
+  } catch (error) {
+    console.error('Erro ao buscar amigo:', error);
+    res.status(500).json({ message: 'Erro interno do servidor' });
+  }
+});
   
 const port = 5000;
 app.listen(port, () => {

@@ -6,6 +6,7 @@ import './App.css'; // Manter o CSS global ou para ambos
 import Login from './Login';
 import Conta from './Conta';
 import Albums from './Albums';
+import Pareamento from './pareamento';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/conta" element={<Conta />} />
         <Route path="/login" element={<Login />} />
         <Route path="/albums" element={<Albums />} />
+        <Route path="/pareamento" element={<Pareamento />} />
       </Routes>
     </Router>
   );
