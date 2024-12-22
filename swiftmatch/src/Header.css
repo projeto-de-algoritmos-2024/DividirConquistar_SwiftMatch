@@ -29,7 +29,7 @@
   html, body {
     height: 100%;
     margin: 0; /* Remove margens padrão */
-    background-color: #faf3f6; /* Azul claro como fundo */
+    background-color: #edeff8; /* Azul claro como fundo */
     color: #020101; /* Cor do texto */
     display: flex; /* Usar flexbox para centralizar o conteúdo */
     flex-direction: column; /* Colocar os itens em uma coluna */

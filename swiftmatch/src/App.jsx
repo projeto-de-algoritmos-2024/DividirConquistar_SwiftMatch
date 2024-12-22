@@ -5,6 +5,7 @@ import CreateAccount from './CreateAccount'; // Importando a Tela de Criação d
 import './App.css'; // Manter o CSS global ou para ambos
 import Login from './Login';
 import Conta from './Conta';
+import Albums from './Albums';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/criar-conta" element={<CreateAccount />} /> {/* Página de criação de conta */}
         <Route path="/conta" element={<Conta />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/albums" element={<Albums />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,29 @@
+/* Conta.css */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Alinha os botões à esquerda */
+    margin-top: 1000px;
+  }
+  
+  .button {
+    width: 365px; /* Tamanho fixo para o quadrado do botão */
+    height: 220px; /* Tamanho fixo para o quadrado do botão */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do quadrado */
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para os botões (opcional) */
+    cursor: pointer; /* Torna o botão clicável */
+  }
+  
+  .button img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 100%; /* Garante que a imagem ocupe toda a altura do contêiner */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+  
+  .button img:hover {
+    transform: scale(1.05); /* Aumenta um pouco a imagem quando o mouse passa por cima */
+  }
+  
