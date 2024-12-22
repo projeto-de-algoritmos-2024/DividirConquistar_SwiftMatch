@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   margin: 0; /* Remove margens padrão */
   background-color: #402c34; /* Azul claro como fundo */
-  color: #fcb4d4; /* Cor do texto */
+  color: #f5d5d5; /* Cor do texto */
   display: flex; /* Usar flexbox para centralizar o conteúdo */
   flex-direction: column; /* Colocar os itens em uma coluna */
   justify-content: center; /* Alinhar os itens verticalmente ao centro */
