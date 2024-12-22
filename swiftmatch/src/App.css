@@ -13,11 +13,11 @@
 
 h1 {
   font-size: 3rem;
-  color: #fcb4d4;
+  color: #c4b4a4;
 }
 
 .start-button {
-  background-color: #fcb4d4;
+  background-color: #c4b4a4;
   color: #402c34;
   padding: 10px 20px;
   border: none;
@@ -29,6 +29,7 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #2c2424;
 }
 
 .signup-form {
@@ -63,7 +64,7 @@ input:focus {
 
 .submit-btn {
   padding: 10px;
-  background-color: #fcb4d4;
+  background-color: #2c2424;
   color: white;
   border: none;
   border-radius: 5px;
@@ -72,19 +73,19 @@ input:focus {
 }
 
 .submit-btn:hover {
-  background-color: #fcb4d4;
+  background-color: #2c2424;
 }
 
 p {
-  margin-top: 20px;
+  font-size: 1rem;
+  color: #2c2424;
 }
 
 a {
-  color: #fcb4d4;
+  color: #2c2424;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
 }
-

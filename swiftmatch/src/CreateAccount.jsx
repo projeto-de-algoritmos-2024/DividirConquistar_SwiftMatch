@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './App.css'; // Você pode usar o mesmo arquivo CSS
 
 function CreateAccount() {
+
+    useEffect(() => {
+        // Altera o estilo de fundo do body quando a página 'Home' for renderizada
+        document.body.style.backgroundColor = '#e4ccac'; 
+        
+    
+        // Limpa o estilo quando a página for desmontada para não afetar outras páginas
+        return () => {
+          document.body.style.backgroundColor = ''; 
+        };
+    }, []);
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');

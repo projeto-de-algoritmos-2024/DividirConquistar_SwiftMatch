@@ -6,7 +6,7 @@
     width: 100%;
     background-color: #070405; /* Cor de fundo */
     color: white; /* Cor do texto */
-    padding: 25px 0; /* Espaçamento interno */
+    padding: 15px 0; /* Espaçamento interno */
     z-index: 1000; /* Garante que fique acima de outros elementos */
     padding-left: 20px; /* Espaçamento da esquerda */
   }
@@ -29,8 +29,7 @@
   html, body {
     height: 100%;
     margin: 0; /* Remove margens padrão */
-    background-color: #edeff8; /* Azul claro como fundo */
-    color: #020101; /* Cor do texto */
+    color: #010102; /* Cor do texto */
     display: flex; /* Usar flexbox para centralizar o conteúdo */
     flex-direction: column; /* Colocar os itens em uma coluna */
     justify-content: center; /* Alinhar os itens verticalmente ao centro */

@@ -1,23 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header'; // Importando o cabeçalho
 import './Conta.css';
 import { Link } from 'react-router-dom'; // Importe o Link
 
 function Conta() {
-  // Estado para controlar a imagem de cada botão
   const [hoveredButton, setHoveredButton] = useState(null);
 
-  // Função para definir a imagem do botão ao passar o mouse
+  useEffect(() => {
+    // Altera o fundo do body quando a página 'Conta' for renderizada
+    document.body.style.backgroundColor = '#f5f8fa';  // Cor de fundo desejada
+
+    // Limpa o estilo quando a página for desmontada
+    return () => {
+      document.body.style.backgroundColor = ''; // Restaura o fundo original
+    };
+  }, []);
+
   const handleMouseEnter = (buttonId) => {
     setHoveredButton(buttonId);
   };
 
-  // Função para resetar a imagem do botão ao retirar o mouse
   const handleMouseLeave = () => {
     setHoveredButton(null);
   };
 
-  // Lista de 12 botões (pode ser ajustado conforme necessário)
   const buttons = [
     { id: 1, defaultImg: '/images/albums.png', hoverImg: '/images/albums2.jpg' },
     { id: 2, defaultImg: '/images/TaylorSwift.png', hoverImg: '/images/taylorswift2.jpg' },

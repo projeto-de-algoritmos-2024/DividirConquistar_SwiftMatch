@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    font-family: Arial, sans-serif;
+    background-color: inherit; 
+  }
+  
+  .albums {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; /* Garante que o componente ocupe toda a largura da janela */
+  }
+  
+  .albums-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Garante que o conteúdo ocupe toda a largura */
+    padding-top: 130px; 
+  }
+  
+  .albums-rankings {
+    display: flex;
+    gap: 0; /* Remove espaçamento entre imagens */
+    flex-wrap: nowrap;
+    width: 100vw; /* O contêiner de imagens ocupa toda a largura */
+    overflow: hidden; /* Remove quaisquer possíveis excessos laterais */
+  }
+  
+  .album {
+    flex: 1;
+    transition: flex 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .album.selected {
+    flex: 3; /* Aumenta o tamanho da imagem selecionada */
+  }
+  
+  .album-image {
+    width: 100%;
+    height: 90vh; /* Imagens ocupam toda a altura da janela */
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  
+  
+  
+  
