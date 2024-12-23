@@ -1,4 +1,3 @@
-// src/models/Ranking.js
 import { Sequelize, DataTypes } from 'sequelize';
 import sequelize from '../config/database.js';
 import Usuario from './User.js';

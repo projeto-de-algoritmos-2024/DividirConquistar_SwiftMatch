@@ -1,0 +1,29 @@
+/* Estilo para as imagens somente na página Comparar */
+.comparar .album-image {
+    width: 100px; /* Ajustando o tamanho das imagens para caberem na tela */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 8px; /* Espaço entre as imagens */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor das imagens */
+    object-fit: cover; /* Garante que as imagens não distorçam */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação para o efeito hover */
+  }
+  
+  /* Efeito de hover nas imagens dentro da página Comparar */
+  .comparar .album-image:hover {
+    transform: scale(1.05); /* Aumenta o tamanho da imagem no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+  }
+  
+  /* Estilo para a linha de álbuns */
+  .comparar .album-row {
+    display: flex;
+    justify-content: flex-start; /* Alinha as imagens à esquerda */
+    gap: 8px; /* Espaçamento entre as imagens */
+    flex-wrap: no-wrap; /* Impede que as imagens quebrem para uma nova linha */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    margin-top: 20px;
+    width: 100%; /* Certifica que o contêiner ocupa toda a largura */
+    box-sizing: border-box; /* Para garantir que o padding/margem não ultrapasse o limite */
+  }
+  

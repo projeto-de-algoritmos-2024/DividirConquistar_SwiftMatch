@@ -111,7 +111,6 @@ app.post('/api/find-friend', async (req, res) => {
     // Retorna os rankings para comparação
     return res.json({
       username: user.username,
-      myRanking: ranking.dataValues.ranking, // Aqui você ajustaria para o formato dos dados de rankeamento
       friendRanking: ranking.dataValues.ranking,
     });
   } catch (error) {
@@ -119,7 +118,34 @@ app.post('/api/find-friend', async (req, res) => {
     res.status(500).json({ message: 'Erro interno do servidor' });
   }
 });
-  
+
+// Rota para buscar o ranking de um usuário
+app.get('/api/get-ranking', async (req, res) => {
+  const userId = req.query.userId;
+
+  if (!userId) {
+    return res.status(400).json({ message: 'ID do usuário não fornecido' });
+  }
+
+  try {
+    // Busca o ranking do usuário
+    const ranking = await Ranking.findOne({ where: { userId } });
+
+    if (!ranking) {
+      return res.status(404).json({ message: 'Ranking não encontrado para o usuário' });
+    }
+
+    // Retorna o ranking do usuário
+    return res.json({
+      userId,
+      ranking: ranking.dataValues.ranking,
+    });
+  } catch (error) {
+    console.error('Erro ao buscar ranking:', error);
+    res.status(500).json({ message: 'Erro ao buscar ranking', error: error.message });
+  }
+});
+
 const port = 5000;
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}...`);
