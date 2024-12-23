@@ -1,0 +1,58 @@
+.Evermore .header {
+    background-color: #e4ccac; /* Cor de fundo do cabeçalho */
+    color: #000; /* Cor do texto */
+  }
+  
+  .Evermore .header h1 {
+    color: #2c2424 !important; /* Cor do título no cabeçalho */
+  }
+  
+/* Estilização da página */
+.Evermore-content {
+    color: #e4ccac;
+    text-align: center;
+    padding: 20px;
+    margin-top: 500px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #e4ccac; /* Cor do título */
+  }
+  
+/* Container flexível para botões */
+.Evermore-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: #e4ccac;
+  }
+  
+  /* Botão estilizado */
+  .Evermore-music-button {
+    background-color: #e4ccac;
+    color: #2c2424;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    user-select: none; /* Impede seleção durante o arrasto */
+  }
+  
+  .Evermore-music-button:active {
+    cursor: grabbing;
+    background-color: #4682b4;
+  }
+  
+  .Evermore-music-button.dragging {
+    opacity: 0.6;
+    background-color: #5f9ea0;
+  }
+  
+  

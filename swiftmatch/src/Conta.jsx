@@ -43,11 +43,12 @@ function Conta() {
     <div className="conta">
       <Header />
       <main className="conta-content">
-        <h2>Bem-vindo à sua conta!</h2>
-        <p>Aqui você pode gerenciar suas informações, preferências, e muito mais.</p>
         <div className="buttons-container">
           {buttons.map((button) => (
-            <Link key={button.id} to={button.id === 1 ? "/albums" : "#"}> {/* Se o botão for o primeiro, redireciona para /albums */}
+            <Link
+              key={button.id}
+              to={button.id === 1 ? "/albums" : button.id === 2 ? "/taylorswift" : button.id === 3 ? "/fearless" : button.id === 4 ? "/speaknow" : button.id === 5 ? "/red" : button.id === 6 ? "/1989" : button.id === 7 ? "/reputation" : button.id === 8 ? "/lover" : button.id === 9 ? "/folklore" : button.id === 10 ? "/evermore" : button.id === 11 ? "/midnights" : button.id === 12 ? "/ttpd" :"#"}
+            >
               <img
                 src={hoveredButton === button.id ? button.hoverImg : button.defaultImg}
                 alt={`Button ${button.id}`}

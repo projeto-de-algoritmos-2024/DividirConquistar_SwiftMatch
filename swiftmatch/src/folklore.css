@@ -1,0 +1,58 @@
+.Folklore .header {
+    background-color: #d4d4d4; /* Cor de fundo do cabeçalho */
+    color: #000; /* Cor do texto */
+  }
+  
+  .Folklore .header h1 {
+    color: #040404 !important; /* Cor do título no cabeçalho */
+  }
+  
+/* Estilização da página */
+.Folklore-content {
+    color: #d4d4d4;
+    text-align: center;
+    padding: 20px;
+    margin-top: 500px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #d4f4fc; /* Cor do título */
+  }
+  
+/* Container flexível para botões */
+.Folklore-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: #d4d4d4;
+  }
+  
+  /* Botão estilizado */
+  .Folklore-music-button {
+    background-color: #d4d4d4;
+    color: #040404;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    user-select: none; /* Impede seleção durante o arrasto */
+  }
+  
+  .Folklore-music-button:active {
+    cursor: grabbing;
+    background-color: #4682b4;
+  }
+  
+  .Folklore-music-button.dragging {
+    opacity: 0.6;
+    background-color: #5f9ea0;
+  }
+  
+  

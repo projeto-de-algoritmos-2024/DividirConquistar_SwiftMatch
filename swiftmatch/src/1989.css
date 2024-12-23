@@ -1,0 +1,58 @@
+.Ts1989 .header {
+    background-color: #044c64; /* Cor de fundo do cabeçalho */
+    color: #000; /* Cor do texto */
+  }
+  
+  .Ts1989 .header h1 {
+    color: #d4f4fc !important; /* Cor do título no cabeçalho */
+  }
+  
+/* Estilização da página */
+.Ts1989-content {
+    color: #044c64;
+    text-align: center;
+    padding: 20px;
+    margin-top: 600px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #d4f4fc; /* Cor do título */
+  }
+  
+/* Container flexível para botões */
+.Ts1989-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: #044c64;
+  }
+  
+  /* Botão estilizado */
+  .Ts1989-music-button {
+    background-color: #044c64;
+    color: #d4f4fc;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    user-select: none; /* Impede seleção durante o arrasto */
+  }
+  
+  .Ts1989-music-button:active {
+    cursor: grabbing;
+    background-color: #4682b4;
+  }
+  
+  .Ts1989-music-button.dragging {
+    opacity: 0.6;
+    background-color: #5f9ea0;
+  }
+  
+  

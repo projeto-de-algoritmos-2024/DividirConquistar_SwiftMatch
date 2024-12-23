@@ -1,0 +1,57 @@
+.Red .header {
+    background-color: #74343c; /* Cor de fundo do cabeçalho */
+    color: #000; /* Cor do texto */
+  }
+  
+  .Red .header h1 {
+    color: #c4b4a4 !important; /* Cor do título no cabeçalho */
+  }
+  
+/* Estilização da página */
+.Red-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 1000px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #c4b4a4; /* Cor do título */
+  }
+  
+/* Container flexível para botões */
+.Red-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Botão estilizado */
+  .Red-music-button {
+    background-color: #74343c;
+    color: #c4b4a4;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    user-select: none; /* Impede seleção durante o arrasto */
+  }
+  
+  .Red-music-button:active {
+    cursor: grabbing;
+    background-color: #4682b4;
+  }
+  
+  .Red-music-button.dragging {
+    opacity: 0.6;
+    background-color: #5f9ea0;
+  }
+  
+  
