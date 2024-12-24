@@ -50,8 +50,3 @@ o código trabalha com um database chamado 'swiftmatch', para testar por complet
 ## Uso
 É necessário criar ao menos duas contas e fazer um rankeamento em cada uma delas, depois é necessário apenas seguir o passo a passo indicado durante o uso.
 
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
