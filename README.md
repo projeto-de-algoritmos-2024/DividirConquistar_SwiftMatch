@@ -1,7 +1,7 @@
 # DividirConquistar_SwiftMatch
 
 
-**Número da Lista**: 37
+**Número da Lista**: 35
 **Conteúdo da Disciplina**: Dividir e conquistar<br>
 
 ## Alunos
@@ -17,6 +17,14 @@ https://youtu.be/K-4N4o0V0Ac
 O objetivo do projeto é identificar a similaridade do gosto dos usuários, deixando que eles comparem os seus favoritos com os de amigos. Usando a contagem de inversões, os usuários podem ver a porcentagem de similaridade e ver a diferença visualmente.
 
 ## Screenshots
+![image](https://github.com/user-attachments/assets/91307d66-a7aa-47b1-92f5-1332848dc77f)
+![image](https://github.com/user-attachments/assets/bad44a0f-e542-4006-9e33-8e81ee14e5aa)
+![image](https://github.com/user-attachments/assets/159938f8-ad2c-44e8-a2ed-59c21add004b)
+![image](https://github.com/user-attachments/assets/0b066a2d-c730-4c06-b41b-59d93520655a)
+![image](https://github.com/user-attachments/assets/8439a2be-0b19-4461-b8d5-f2151f33e4ea)
+![image](https://github.com/user-attachments/assets/68ed2cdc-4e1e-404a-ac07-0d91e9cda2ac)
+![image](https://github.com/user-attachments/assets/4dcea1fe-69e3-4920-aae0-e97eacdb2981)
+![image](https://github.com/user-attachments/assets/b8f0ad6d-02c1-4323-9a23-b63eef1ba14d)
 
 
 ## Instalação 
