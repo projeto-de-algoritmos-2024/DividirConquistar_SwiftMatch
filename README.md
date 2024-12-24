@@ -17,15 +17,14 @@ https://youtu.be/K-4N4o0V0Ac
 O objetivo do projeto é identificar a similaridade do gosto dos usuários, deixando que eles comparem os seus favoritos com os de amigos. Usando a contagem de inversões, os usuários podem ver a porcentagem de similaridade e ver a diferença visualmente.
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/91307d66-a7aa-47b1-92f5-1332848dc77f)
-![image](https://github.com/user-attachments/assets/bad44a0f-e542-4006-9e33-8e81ee14e5aa)
-![image](https://github.com/user-attachments/assets/159938f8-ad2c-44e8-a2ed-59c21add004b)
-![image](https://github.com/user-attachments/assets/0b066a2d-c730-4c06-b41b-59d93520655a)
-![image](https://github.com/user-attachments/assets/8439a2be-0b19-4461-b8d5-f2151f33e4ea)
-![image](https://github.com/user-attachments/assets/68ed2cdc-4e1e-404a-ac07-0d91e9cda2ac)
-![image](https://github.com/user-attachments/assets/4dcea1fe-69e3-4920-aae0-e97eacdb2981)
-![image](https://github.com/user-attachments/assets/b8f0ad6d-02c1-4323-9a23-b63eef1ba14d)
-
+![image](https://github.com/user-attachments/assets/48a5020c-257c-41c5-b9d5-8d50b0d8372b)
+![image](https://github.com/user-attachments/assets/2673e96e-9881-4cd7-9ded-67ec2db4f02d)
+![image](https://github.com/user-attachments/assets/1cd23c9a-f122-4222-a6f8-f1157101457a)
+![image](https://github.com/user-attachments/assets/63f2a4c8-a5ad-4d2a-83ba-deb33d2ca85a)
+![image](https://github.com/user-attachments/assets/1d1c4bc7-e87a-4c08-ab90-680f44768db5)
+![image](https://github.com/user-attachments/assets/4177aefd-f7e5-4afd-b084-90ca4243662d)
+![image](https://github.com/user-attachments/assets/7c412e04-c654-4768-aa3c-cf637f5e2cb2)
+![image](https://github.com/user-attachments/assets/5f0d7aac-992f-4c73-9985-238c1564e7bc)
 
 ## Instalação 
 Antes de rodar o projeto, você precisa ter os seguintes requisitos instalados:
