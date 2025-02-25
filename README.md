@@ -8,7 +8,6 @@
 |Matrícula | Aluno |
 | -- | -- |
 | 221037975 |  Natália Rodrigues de Morais |
-| 221021975 |  Gabriel Santos Monteiro|
 
 ## Apresentação
 https://youtu.be/K-4N4o0V0Ac
